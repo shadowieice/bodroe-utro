@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Кофейня «Бодрое утро» на Лесной: кофе, какао и выпечка с утра, цены в рублях и бронь столика у окна."
+    />
+    <meta name="theme-color" content="#f3ecdf" />
+    <title>Бодрое утро — кофейня</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,650&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f4a3c'/%3E%3Ccircle cx='16' cy='13' r='5' fill='%23e7b15a'/%3E%3Cpath d='M9 23h14' stroke='%23f3ecdf' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body id="top">
+    <header class="header">
+      <div class="wrap header-bar">
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span>Бодрое утро</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="sr-only">Открыть меню</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Разделы страницы">
+          <a href="#menu">Меню</a>
+          <a href="#about">О кофейне</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#booking">Бронь</a>
+          <a class="btn btn-small" href="#booking">Забронировать</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">Кофейня у дома · ежедневно с 7:30</p>
+          <h1>Утро, которое хочется повторить</h1>
+          <p class="lede">
+            На Лесной варим кофе из своей обжарки, печём круассаны до открытия
+            и держим столик у окна, если предупредить заранее.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#booking">Забронировать столик</a>
+            <a class="btn btn-ghost" href="#menu">Смотреть меню</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Фильтр дня">
+          <p class="panel-kicker">Сегодня на фильтре</p>
+          <p class="panel-title">Эфиопия Гуджи</p>
+          <p class="panel-note">Жасмин, персик и тростниковый сахар. Чашка — 250&nbsp;₽.</p>
+          <div class="cup-scene" aria-hidden="true">
+            <span class="steam"></span>
+            <span class="steam steam-2"></span>
+            <span class="steam steam-3"></span>
+            <svg class="cup" viewBox="0 0 220 150">
+              <ellipse cx="104" cy="132" rx="72" ry="10" fill="rgba(255,250,244,0.12)" />
+              <path d="M48 58h104v36a52 52 0 0 1-104 0V58z" fill="#f6f1e7" />
+              <path d="M58 58h84v8H58z" fill="#e7b15a" />
+              <path
+                d="M152 74h14a20 20 0 0 1 0 40h-16"
+                fill="none"
+                stroke="#f6f1e7"
+                stroke-width="8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </aside>
+      </section>
+
+      <section class="facts" aria-label="Коротко о кофейне">
+        <ul class="wrap facts-list">
+          <li>
+            <strong>7:30</strong>
+            <span>первый эспрессо</span>
+          </li>
+          <li>
+            <strong>своя</strong>
+            <span>обжарка раз в неделю</span>
+          </li>
+          <li>
+            <strong>24</strong>
+            <span>места, восемь у окна</span>
+          </li>
+          <li>
+            <strong>15 мин</strong>
+            <span>держим бронь</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section wrap" id="menu">
+        <div class="section-head reveal">
+          <p class="eyebrow">01 — Меню</p>
+          <h2>Напитки и то, что к ним</h2>
+          <p class="section-lead">
+            Цены в рублях. Овсяное молоко — плюс 40&nbsp;₽. Завтрак несём до полудня.
+          </p>
+        </div>
+        <div class="filters reveal" role="tablist" aria-label="Разделы меню">
+          <button class="filter is-active" type="button" data-filter="all" role="tab" aria-selected="true">
+            Всё
+          </button>
+          <button class="filter" type="button" data-filter="coffee" role="tab" aria-selected="false">
+            Кофе
+          </button>
+          <button class="filter" type="button" data-filter="other" role="tab" aria-selected="false">
+            Не кофе
+          </button>
+          <button class="filter" type="button" data-filter="bake" role="tab" aria-selected="false">
+            Выпечка
+          </button>
+        </div>
+        <div class="menu-board reveal" id="menu-board">
+          <div class="menu-group" data-group="coffee">
+            <h3>Кофе</h3>
+            <ul class="menu-list">
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Эспрессо</p>
+                  <p class="item-note">Плотный шот: какао, фундук и короткая горчинка.</p>
+                </div>
+                <p class="price">160&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Американо</p>
+                  <p class="item-note">Эспрессо и горячая вода, без лишней горечи.</p>
+                </div>
+                <p class="price">200&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Капучино</p>
+                  <p class="item-note">Двойной эспрессо и плотная шёлковая пена.</p>
+                </div>
+                <p class="price">270&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Латте</p>
+                  <p class="item-note">Больше молока, мягкий и длинный.</p>
+                </div>
+                <p class="price">290&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Флэт уайт</p>
+                  <p class="item-note">Двойная порция кофе в бархатистом молоке.</p>
+                </div>
+                <p class="price">300&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Фильтр дня</p>
+                  <p class="item-note">Светлая обжарка. Сегодня — Эфиопия Гуджи.</p>
+                </div>
+                <p class="price">250&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Раф ванильный</p>
+                  <p class="item-note">Сливки, ваниль и эспрессо, взбитые вместе.</p>
+                </div>
+                <p class="price">330&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="coffee">
+                <div>
+                  <p class="item-name">Бодрое утро <span class="chip">фирменный</span></p>
+                  <p class="item-note">Эспрессо, апельсин, мёд и щепотка корицы.</p>
+                </div>
+                <p class="price">360&nbsp;₽</p>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-group" data-group="other">
+            <h3>Не кофе</h3>
+            <ul class="menu-list">
+              <li class="menu-item" data-cat="other">
+                <div>
+                  <p class="item-name">Какао</p>
+                  <p class="item-note">На топлёном молоке, густое и не порошковое.</p>
+                </div>
+                <p class="price">260&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="other">
+                <div>
+                  <p class="item-name">Матча латте</p>
+                  <p class="item-note">Японская матча. Молоко обычное или овсяное.</p>
+                </div>
+                <p class="price">350&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="other">
+                <div>
+                  <p class="item-name">Чай ассам</p>
+                  <p class="item-note">Заварник на двоих, крепкий и солодовый.</p>
+                </div>
+                <p class="price">180&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="other">
+                <div>
+                  <p class="item-name">Домашний лимонад</p>
+                  <p class="item-note">Лимон, мята и немного имбиря. Со льдом.</p>
+                </div>
+                <p class="price">230&nbsp;₽</p>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-group" data-group="bake">
+            <h3>К напитку</h3>
+            <ul class="menu-list">
+              <li class="menu-item" data-cat="bake">
+                <div>
+                  <p class="item-name">Круассан</p>
+                  <p class="item-note">Слоёный, печём до открытия. До 11:00 ещё тёплый.</p>
+                </div>
+                <p class="price">190&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="bake">
+                <div>
+                  <p class="item-name">Булочка с корицей</p>
+                  <p class="item-note">Мягкая, со сливочной глазурью.</p>
+                </div>
+                <p class="price">220&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="bake">
+                <div>
+                  <p class="item-name">Сырник</p>
+                  <p class="item-note">Тёплый, со сметаной. Подаём до 12:00.</p>
+                </div>
+                <p class="price">200&nbsp;₽</p>
+              </li>
+              <li class="menu-item" data-cat="bake">
+                <div>
+                  <p class="item-name">Миндальное печенье</p>
+                  <p class="item-note">Рассыпчатое, к фильтру или эспрессо.</p>
+                </div>
+                <p class="price">140&nbsp;₽</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="wrap about-grid">
+          <div class="about-story reveal">
+            <p class="eyebrow">02 — О кофейне</p>
+            <h2>Маленький зал и большое окно на Лесную</h2>
+            <p>
+              «Бодрое утро» открыли соседи, которым надоело пить кофе на бегу.
+              Зерно обжариваем небольшими партиями, молоко берём у фермы в часе
+              езды, а музыку держим тише разговора.
+            </p>
+            <p>
+              Утром здесь пахнет круассанами и апельсиновой цедрой — так пахнет
+              фирменный напиток. Днём можно сесть с ноутбуком: розетки есть,
+              звонки лучше оставить на улице.
+            </p>
+          </div>
+          <aside class="about-card reveal">
+            <h3>Как зайти</h3>
+            <dl>
+              <div>
+                <dt>Адрес</dt>
+                <dd>ул. Лесная, 12<br />5 минут от остановки «Сквер»</dd>
+              </div>
+              <div>
+                <dt>Часы</dt>
+                <dd>Ежедневно, 7:30–21:00<br />Кухня завтраков до 12:00</dd>
+              </div>
+              <div>
+                <dt>Телефон</dt>
+                <dd><a href="tel:+74951200730">+7 (495) 120-07-30</a></dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section wrap" id="reviews">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 — Отзывы</p>
+          <h2>Что говорят гости</h2>
+        </div>
+        <div class="reviews">
+          <figure class="review reveal">
+            <blockquote>
+              Единственное место, куда я опаздываю с удовольствием. Капучино ровное,
+              а круассан в восемь утра ещё тёплый.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">М</span>
+              <span>
+                <strong>Марина</strong>
+                <span>гость по будням</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote>
+              Фильтр дня меняется, и это честно написано на доске. Бариста
+              объясняет зерно коротко, без лекции.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">А</span>
+              <span>
+                <strong>Артём</strong>
+                <span>берёт фильтр навынос</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote>
+              Бронировали столик у окна на день рождения. Тихо, светло, торт
+              принесли без суеты и без песни.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">О</span>
+              <span>
+                <strong>Ольга</strong>
+                <span>столик на четверых</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote>
+              Раф не приторный — редкость. Беру «Бодрое утро» и работаю час:
+              розетки есть, музыку не перебивают.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">К</span>
+              <span>
+                <strong>Кирилл</strong>
+                <span>работает у окна</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section wrap" id="booking">
+        <div class="booking">
+          <div class="booking-copy reveal">
+            <p class="eyebrow">04 — Бронь</p>
+            <h2>Столик у окна</h2>
+            <p>
+              Оставьте имя и время — на этой странице заявка сохранится как
+              подтверждение. Покажите его бариста. Мы перезвоним вам в течение 10 минут.
+            </p>
+            <ul class="booking-notes">
+              <li>Держим стол 15 минут</li>
+              <li>Компании от 1 до 6 гостей</li>
+              <li>Последняя посадка в 20:00</li>
+            </ul>
+          </div>
+          <form class="booking-form reveal" id="booking-form" novalidate>
+            <div class="field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Анна" />
+              <p class="error" id="name-error"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+                placeholder="+7 900 000-00-00"
+              />
+              <p class="error" id="phone-error"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="date">Дата</label>
+                <input id="date" name="date" type="date" required />
+                <p class="error" id="date-error"></p>
+              </div>
+              <div class="field">
+                <label for="time">Время</label>
+                <select id="time" name="time" required>
+                  <option value="">Выберите</option>
+                  <option>07:30</option>
+                  <option>08:00</option>
+                  <option>08:30</option>
+                  <option>09:00</option>
+                  <option>09:30</option>
+                  <option>10:00</option>
+                  <option>10:30</option>
+                  <option>11:00</option>
+                  <option>11:30</option>
+                  <option>12:00</option>
+                  <option>12:30</option>
+                  <option>13:00</option>
+                  <option>13:30</option>
+                  <option>14:00</option>
+                  <option>14:30</option>
+                  <option>15:00</option>
+                  <option>15:30</option>
+                  <option>16:00</option>
+                  <option>16:30</option>
+                  <option>17:00</option>
+                  <option>17:30</option>
+                  <option>18:00</option>
+                  <option>18:30</option>
+                  <option>19:00</option>
+                  <option>19:30</option>
+                  <option>20:00</option>
+                </select>
+                <p class="error" id="time-error"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="guests">Гостей</label>
+              <select id="guests" name="guests" required>
+                <option value="">Сколько вас</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+              <p class="error" id="guests-error"></p>
+            </div>
+            <div class="field">
+              <label for="wish">Пожелание</label>
+              <textarea id="wish" name="wish" rows="3" placeholder="Столик у окна, без спешки"></textarea>
+            </div>
+            <button class="btn btn-accent btn-full" type="submit">Забронировать</button>
+          </form>
+          <div class="booking-success" id="booking-success" hidden>
+            <p class="eyebrow">Готово</p>
+            <h3 id="success-title" tabindex="-1">Ждём вас</h3>
+            <p id="success-text"></p>
+            <button class="btn btn-ghost" type="button" id="book-again">Новая бронь</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-bar">
+        <p class="logo">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Бодрое утро
+        </p>
+        <p>ул. Лесная, 12 · <a href="tel:+74951200730">+7 (495) 120-07-30</a></p>
+        <p>© <span id="year">2026</span> Кофейня «Бодрое утро»</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
